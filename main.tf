@@ -2,20 +2,20 @@ variable "billing_account" {}
 
 variable "name" {}
 
-variable "environment_group" {}
+variable "group_name" {}
 
-variable "environment" {}
+variable "environment_name" {}
 
-variable "parent_folder_id" {}
+variable "environment_folder_id" {}
 
 variable "organization_id" {}
 
 locals {
-  project_name = "${var.environment_group}-${var.environment}-${var.name}"
+  project_name = "${var.group_name}-${var.environment_name}-${var.name}"
 }
 
 
-output "bucket_name" {
+output "state_bucket_name" {
   value = google_storage_bucket.state.name
 }
 
