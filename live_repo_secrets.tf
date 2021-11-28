@@ -5,7 +5,7 @@ locals {
     "organization_id" : var.organization_id,
     "billing_account" : var.billing_account,
     "service_account_id" : module.app_project.service_account_id,
-    "service_account_email" : module.app_project.service_account_id,
+    "service_account_email" : module.app_project.service_account_email,
     "project_id" : module.app_project.project_id,
     "name" : var.name,
   })
