@@ -1,13 +1,13 @@
 
 locals {
   secrets = tomap({
-    "state_bucket_name" : google_storage_bucket.state.name,
-    "organization_id" : var.organization_id,
     "billing_account" : var.billing_account,
-    "service_account_id" : module.app_project.service_account_id,
-    "service_account_email" : module.app_project.service_account_email,
-    "project_id" : module.app_project.project_id,
     "name" : var.name,
+    "organization_id" : var.organization_id,
+    "project_id" : module.app_project.project_id,
+    "service_account_email" : module.app_project.service_account_email,
+    "service_account_id" : module.app_project.service_account_id,
+    "state_bucket_name" : google_storage_bucket.state.name,
   })
 }
 
